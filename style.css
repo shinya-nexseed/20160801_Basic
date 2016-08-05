@@ -1,0 +1,22 @@
+/* タイプセレクタ */
+div {
+  color: red;
+  font-size: 30px;
+}
+
+/* 子孫セレクタ */
+div p {
+  font-weight: bold;
+}
+
+/* idセレクタ */
+#site_title {
+  color: blue;
+}
+
+/* classセレクタ */
+.small {
+  font-size: 10px;
+}
+
+

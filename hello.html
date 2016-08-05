@@ -5,7 +5,9 @@
     <title>HTML概論</title>
   </head>
   <body>
-    ここにコンテンツを書き込む<br>
+    <div id="page_top">
+      ここにコンテンツを書き込む
+    </div>
     ふたつ目の文章
     <div id="main" class="red big">
       みっつ目の文章
@@ -41,5 +43,63 @@ Class PreTag {
       <li>PHP</li>
       <li>MySQL</li>
     </ol>
+    <table>
+      <caption>表題</caption>
+      <thead>
+        <tr>
+          <th>ヘッダ1</th>
+          <th>ヘッダ2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1-1</td>
+          <td>2-1</td>
+        </tr>
+        <tr>
+          <td>1-2</td>
+          <td>2-2</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- コメントアウト → cmd + / -->
+    <!-- 外部リンク -->
+    <a href="indent.html" target="_blank">indent.htmlへ遷移</a><br>
+    <!-- 内部リンク -->
+    <a href="#page_top"> 次ページへ&gt;&gt; </a><br>
+    <img src="http://nexseed.net/images/logo.jpg" alt="NexSeedロゴ">
+    <img src="images/shinya.jpg" alt="プロフィール画像" width="200">
+    <form action="hello.html" method="get">
+      <!--
+        - フォームのget送信
+          URLの末尾に?から始まるパラメータとしてデータを送信する仕組み
+          データ量に制限があり、ブラウザ毎に異なるがだいたい2000文字程度
+        - フォームのpost送信
+          セキュリティも考慮してデータが画面に表示されない
+          データ量に制限はない
+      -->
+      <!-- テキストボックス -->
+      お名前: <input type="text" name="full_name" value="hoge"><br>
+      <!-- パスワード用テキストボックス -->
+      パスワード: <input type="password" name="password" value="" placeholder="例: Happyhacking123"><br>
+      <!-- セレクトボックス -->
+      <select name="class">
+        <option value="ios">iOSクラス</option>
+        <option value="web">WEBクラス</option>
+        <option value="basic">Basicクラス</option>
+      </select>
+      <!-- 送信ボタン -->
+      <input type="submit" value="そうしん">
+    </form>
+    <!-- スクリプトの練習 -->
+    <form action="" method="get">
+      <input type="button" onclick="sayHello();" value="Hello">
+    </form>
+    <script>
+      function sayHello() {
+        alert('Hello!');
+        console.log('world!');
+      }
+    </script>
   </body>
 </html>
